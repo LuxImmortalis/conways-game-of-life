@@ -14,6 +14,7 @@ namespace Plotter
         public TexturePlotter(int width, int height, GameObject parent) : base(width, height, parent)
         {
             GameObject.Destroy(GameOfLifeManager.Instance.gameObject.GetComponent<ObjectCellPicker>());
+            
             GameOfLifeManager.Instance.gameObject.GetOrAddComponent<TextureCellPicker>();
         }
 

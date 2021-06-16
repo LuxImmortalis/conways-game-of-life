@@ -31,6 +31,7 @@ namespace Plotter
 
         public QuadPlotter(int width, int height, GameObject parent) : base(width, height, parent)
         {
+            GameObject.Destroy(GameOfLifeManager.Instance.gameObject.GetComponent<TextureCellPicker>());
             _picker = GameOfLifeManager.Instance.gameObject.GetOrAddComponent<ObjectCellPicker>();
         }
     }
